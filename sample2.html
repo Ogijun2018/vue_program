@@ -1,0 +1,15 @@
+<script src="https://unpkg.com/vue@2.5.17"></script>
+<!-- 親がfruits-componentにマウントされたインスタンス -->
+<div id="fruits-container"><fruits-name></fruits-name></div>
+<script>
+  Vue.component("fruits-name", {
+    template: "<p> {{this.$parent.fruits[0].name }} </p>",
+  });
+
+  new Vue({
+    el: "#fruits-container",
+    data: {
+      fruits: [{ name: "梨" }, { name: "イチゴ" }],
+    },
+  });
+</script>
