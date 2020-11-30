@@ -1,3 +1,4 @@
+// ディレクティブの作成サンプル
 Vue.directive('fallback-image',{
   bind: function(el, binding){
     console.log('bind', binding)
